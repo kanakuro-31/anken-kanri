@@ -620,6 +620,11 @@
 
   <!-- ===== 売上履歴ページ ===== -->
   <div class="page" id="page-sales">
+   <div class="year-total-box" id="allTimeBox" style="background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-color:#d1fae5;margin-bottom:18px;">
+      <div class="year-total-label" style="color:var(--green);">📈 全期間 累計売上</div>
+      <div class="year-total-sub" id="allTimeSub">0件の案件</div>
+      <div class="year-total-value" style="color:var(--green);" id="allTimeValue">¥0</div>
+    </div> 
     <div class="year-tabs" id="yearTabs"></div>
     <div class="year-total-box">
       <div class="year-total-label" id="yearTotalLabel">年 合計売上</div>
@@ -1040,6 +1045,11 @@
     const salesData = getSalesData();
     const years = [...new Set(salesData.map(p=>p.delivered.slice(0,4)))].sort().reverse();
 
+    // 全期間累計
+    const allTimeTotal = salesData.reduce((s,p)=> s + Number(p.amount||0), 0);
+    document.getElementById('allTimeSub').textContent = `${salesData.length}件の案件`;
+    document.getElementById('allTimeValue').textContent = yen(allTimeTotal);
+    
     const yearTabsEl = document.getElementById('yearTabs');
     yearTabsEl.innerHTML = "";
 
