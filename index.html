@@ -8,9 +8,9 @@
   :root{
     --bg:#f7f8fb;
     --card:#ffffff;
-    --border:#eceef2;
+    --border:#f0f1f4;
     --text:#1f2330;
-    --sub:#8a8f9c;
+    --sub:#9296a3;
     --accent:#5b5fef;
     --accent-light:#eef0ff;
     --danger:#ef4444;
@@ -19,9 +19,10 @@
     --green-light:#ecfdf5;
     --orange:#f59e0b;
     --orange-light:#fff7ed;
-    --gray:#9ca3af;
-    --gray-light:#f3f4f6;
+    --gray:#a8acb8;
+    --gray-light:#f4f5f7;
     --radius:16px;
+    --shadow:0 1px 3px rgba(31,35,48,0.05), 0 1px 2px rgba(31,35,48,0.04);
   }
   *{box-sizing:border-box;}
   body{
@@ -59,7 +60,7 @@
   h1{
     font-size:17px;
     margin:0;
-    font-weight:800;
+    font-weight:700;
   }
   .sort-btn{
     font-size:12px;
@@ -85,7 +86,8 @@
   }
   .stat-card{
     background:var(--card);
-    border:1px solid var(--border);
+    border:none;
+    box-shadow:var(--shadow);
     border-radius:var(--radius);
     padding:14px;
     cursor:pointer;
@@ -94,12 +96,12 @@
   .stat-label{
     font-size:12px;
     color:var(--sub);
-    font-weight:700;
+    font-weight:600;
     margin-bottom:6px;
   }
   .stat-value{
     font-size:24px;
-    font-weight:800;
+    font-weight:700;
     color:var(--text);
   }
   .stat-card.accent .stat-value{color:var(--accent);}
@@ -109,7 +111,6 @@
     margin-top:4px;
   }
   .stat-card.active-filter{
-    border-color:var(--accent);
     background:var(--accent-light);
   }
 
@@ -128,7 +129,7 @@
     border:1px solid var(--border);
     background:#fff;
     font-size:13px;
-    font-weight:700;
+    font-weight:600;
     color:var(--sub);
     cursor:pointer;
   }
@@ -146,12 +147,12 @@
   }
   .section-head .title{
     font-size:13px;
-    font-weight:800;
+    font-weight:700;
     color:var(--sub);
   }
   .section-head .count{
     font-size:12px;
-    font-weight:700;
+    font-weight:600;
     color:var(--gray);
     background:var(--gray-light);
     padding:3px 10px;
@@ -161,7 +162,8 @@
   /* ---------- 案件カード ---------- */
   .card{
     background:var(--card);
-    border:1px solid var(--border);
+    border:none;
+    box-shadow:var(--shadow);
     border-radius:var(--radius);
     margin-bottom:10px;
     overflow:hidden;
@@ -178,7 +180,7 @@
   }
   .card-name{
     font-size:15px;
-    font-weight:800;
+    font-weight:700;
     line-height:1.4;
   }
   .card-client{
@@ -188,7 +190,7 @@
   }
   .badge{
     font-size:11px;
-    font-weight:800;
+    font-weight:700;
     padding:4px 10px;
     border-radius:20px;
     white-space:nowrap;
@@ -207,7 +209,7 @@
   }
   .deadline-tag{
     font-size:11px;
-    font-weight:700;
+    font-weight:600;
     padding:4px 8px;
     border-radius:8px;
     background:var(--gray-light);
@@ -222,7 +224,7 @@
   }
   .card-amount{
     font-size:16px;
-    font-weight:800;
+    font-weight:700;
   }
   .card-arrow{
     text-align:center;
@@ -234,7 +236,7 @@
   .card-detail{
     display:none;
     padding:0 14px 14px 14px;
-    border-top:1px dashed var(--border);
+    border-top:1px solid var(--border);
   }
   .card.open .card-detail{display:block;}
   .card.open .card-arrow{display:none;}
@@ -246,7 +248,8 @@
     font-size:13px;
   }
   .detail-grid .label{font-size:11px;color:var(--sub);margin-bottom:2px;}
-  .detail-grid .v{font-weight:700;}
+  .detail-grid .v{font-weight:600;}
+  .detail-grid .v.wage{color:var(--accent);}
   .card-actions{
     display:flex;
     gap:8px;
@@ -258,7 +261,7 @@
     border:1px solid var(--border);
     background:#fff;
     font-size:13px;
-    font-weight:700;
+    font-weight:600;
     cursor:pointer;
   }
   .card-actions .edit-btn{color:var(--accent);}
@@ -283,26 +286,27 @@
     flex-shrink:0;
     padding:8px 2px 12px 2px;
     font-size:17px;
-    font-weight:800;
+    font-weight:700;
     color:var(--sub);
-    border-bottom:3px solid transparent;
+    border-bottom:2px solid transparent;
     background:none;border:none;
     cursor:pointer;
   }
   .year-tab.active{
     color:var(--accent);
-    border-bottom:3px solid var(--accent);
+    border-bottom:2px solid var(--accent);
   }
   .year-total-box{
     background:linear-gradient(135deg,var(--accent-light),#f5f3ff);
-    border:1px solid var(--accent-light);
+    border:none;
+    box-shadow:var(--shadow);
     border-radius:var(--radius);
     padding:18px;
     margin-bottom:16px;
   }
   .year-total-label{
     font-size:13px;
-    font-weight:800;
+    font-weight:700;
     color:var(--accent);
     margin-bottom:4px;
   }
@@ -313,12 +317,13 @@
   }
   .year-total-value{
     font-size:30px;
-    font-weight:800;
+    font-weight:700;
     color:var(--accent);
   }
   .month-item{
     background:var(--card);
-    border:1px solid var(--border);
+    border:none;
+    box-shadow:var(--shadow);
     border-radius:var(--radius);
     margin-bottom:10px;
     overflow:hidden;
@@ -332,11 +337,11 @@
   }
   .month-head-left{
     font-size:15px;
-    font-weight:800;
+    font-weight:700;
   }
   .month-head-count{
     font-size:11px;
-    font-weight:700;
+    font-weight:600;
     color:var(--sub);
     background:var(--gray-light);
     padding:2px 8px;
@@ -350,7 +355,7 @@
   }
   .month-head-amount{
     font-size:16px;
-    font-weight:800;
+    font-weight:700;
     color:var(--accent);
   }
   .month-head .arrow{
@@ -372,10 +377,80 @@
     border-top:1px solid var(--border);
     font-size:13px;
   }
-  .month-row .mr-name{font-weight:700;}
+  .month-row .mr-name{font-weight:600;}
   .month-row .mr-client{font-size:11px;color:var(--sub);margin-top:2px;}
-  .month-row .mr-amount{font-weight:800;text-align:right;}
+  .month-row .mr-amount{font-weight:700;text-align:right;}
   .month-row .mr-net{font-size:11px;color:var(--sub);text-align:right;}
+
+  /* ---------- 日報ページ ---------- */
+  .log-date-group{margin-bottom:18px;}
+  .log-date-head{
+    font-size:13px;
+    font-weight:700;
+    color:var(--sub);
+    margin-bottom:8px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .log-date-head .lh-total{
+    font-size:11px;
+    font-weight:600;
+    color:var(--accent);
+    background:var(--accent-light);
+    padding:2px 8px;
+    border-radius:10px;
+  }
+  .log-card{
+    background:var(--card);
+    border:none;
+    box-shadow:var(--shadow);
+    border-radius:14px;
+    padding:14px;
+    margin-bottom:8px;
+  }
+  .log-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+  }
+  .log-project{font-size:14px;font-weight:700;}
+  .log-time{font-size:12px;color:var(--sub);margin-top:3px;}
+  .log-hours{
+    font-size:13px;
+    font-weight:700;
+    color:var(--accent);
+    background:var(--accent-light);
+    padding:3px 10px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  .log-memo{
+    font-size:12px;
+    color:var(--text);
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px solid var(--border);
+    line-height:1.5;
+    white-space:pre-wrap;
+  }
+  .log-actions{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+  }
+  .log-actions button{
+    flex:1;
+    padding:8px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:#fff;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .log-actions .edit-btn{color:var(--accent);}
+  .log-actions .del-btn{color:var(--danger);}
 
   /* ---------- 新規追加ボタン(FAB) ---------- */
   .fab{
@@ -389,7 +464,7 @@
     font-size:26px;
     border:none;
     display:flex;align-items:center;justify-content:center;
-    box-shadow:0 6px 16px rgba(91,95,239,0.4);
+    box-shadow:0 6px 16px rgba(91,95,239,0.35);
     cursor:pointer;
     z-index:60;
   }
@@ -414,7 +489,7 @@
     align-items:center;
     gap:3px;
     font-size:11px;
-    font-weight:700;
+    font-weight:600;
     color:var(--gray);
     cursor:pointer;
   }
@@ -449,7 +524,7 @@
   .form-group label{
     display:block;
     font-size:12px;
-    font-weight:700;
+    font-weight:600;
     color:var(--sub);
     margin-bottom:6px;
   }
@@ -462,6 +537,8 @@
   .form-group input[type="text"],
   .form-group input[type="number"],
   .form-group input[type="date"],
+  .form-group input[type="time"],
+  .form-group textarea,
   .form-group select{
     width:100%;
     padding:12px;
@@ -469,7 +546,9 @@
     border-radius:10px;
     font-size:15px;
     background:#fafbfc;
+    font-family:inherit;
   }
+  .form-group textarea{resize:vertical;min-height:70px;}
   .radio-group{
     display:flex;
     gap:8px;
@@ -495,6 +574,15 @@
     grid-template-columns:1fr 1fr;
     gap:10px;
   }
+  .calc-hours-box{
+    background:var(--accent-light);
+    border-radius:10px;
+    padding:10px 12px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--accent);
+    margin-bottom:14px;
+  }
   .modal-btns{
     display:flex;
     gap:10px;
@@ -515,7 +603,8 @@
   /* バックアップエリア */
   .backup-area{
     background:var(--card);
-    border:1px solid var(--border);
+    border:none;
+    box-shadow:var(--shadow);
     border-radius:var(--radius);
     padding:16px;
     margin-top:24px;
@@ -532,7 +621,7 @@
     border:1px solid var(--border);
     background:#fff;
     font-size:13px;
-    font-weight:700;
+    font-weight:600;
     margin-bottom:8px;
     cursor:pointer;
   }
@@ -618,13 +707,18 @@
     </div>
   </div>
 
+  <!-- ===== 日報ページ ===== -->
+  <div class="page" id="page-logs">
+    <div id="logList"></div>
+  </div>
+
   <!-- ===== 売上履歴ページ ===== -->
   <div class="page" id="page-sales">
-   <div class="year-total-box" id="allTimeBox" style="background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border-color:#d1fae5;margin-bottom:18px;">
+    <div class="year-total-box" id="allTimeBox" style="background:linear-gradient(135deg,#ecfdf5,#f0fdfa);margin-bottom:18px;">
       <div class="year-total-label" style="color:var(--green);">📈 全期間 累計売上</div>
       <div class="year-total-sub" id="allTimeSub">0件の案件</div>
       <div class="year-total-value" style="color:var(--green);" id="allTimeValue">¥0</div>
-    </div> 
+    </div>
     <div class="year-tabs" id="yearTabs"></div>
     <div class="year-total-box">
       <div class="year-total-label" id="yearTotalLabel">年 合計売上</div>
@@ -642,12 +736,15 @@
   <button class="nav-btn active" data-page="projects">
     <span class="icon">📋</span><span>案件</span>
   </button>
+  <button class="nav-btn" data-page="logs">
+    <span class="icon">📝</span><span>日報</span>
+  </button>
   <button class="nav-btn" data-page="sales">
     <span class="icon">📊</span><span>売上履歴</span>
   </button>
 </div>
 
-<!-- モーダル -->
+<!-- 案件モーダル -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <h2 id="modalTitle">新しい案件を追加</h2>
@@ -703,12 +800,50 @@
   </div>
 </div>
 
+<!-- 日報モーダル -->
+<div class="modal-overlay" id="logModalOverlay">
+  <div class="modal">
+    <h2 id="logModalTitle">日報を入力</h2>
+    <form id="logForm">
+      <input type="hidden" id="logId">
+      <div class="form-group">
+        <label>案件名 <span class="hint">(完了以外の案件)</span></label>
+        <select id="l_projectId" required></select>
+      </div>
+      <div class="form-group">
+        <label>作業した日</label>
+        <input type="date" id="l_date" required>
+      </div>
+      <div class="date-row">
+        <div class="form-group">
+          <label>開始時間</label>
+          <input type="time" id="l_start" required>
+        </div>
+        <div class="form-group">
+          <label>終了時間</label>
+          <input type="time" id="l_end" required>
+        </div>
+      </div>
+      <div class="calc-hours-box" id="calcHoursBox">かかった時間：0.0時間</div>
+      <div class="form-group">
+        <label>メモ <span class="hint">(カット・テロップなど作業内容)</span></label>
+        <textarea id="l_memo" placeholder="例）粗カット、テロップ入れ、BGM調整"></textarea>
+      </div>
+      <div class="modal-btns">
+        <button type="button" class="cancel-btn" id="logCancelBtn">キャンセル</button>
+        <button type="submit" class="save-btn">保存する</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
 (function(){
-  const STORAGE_KEY = "video_edit_projects_v2";
+  const STORAGE_KEY = "video_edit_data_v3";
   let projects = [];
+  let workLogs = [];
   let currentPage = "projects";
   let currentFilter = "all";
   let sortAsc = true;
@@ -721,29 +856,42 @@
     try{
       const raw = localStorage.getItem(STORAGE_KEY);
       if(raw){
-        projects = JSON.parse(raw);
+        const data = JSON.parse(raw);
+        projects = data.projects || [];
+        workLogs = data.workLogs || [];
         return;
       }
-      // 旧バージョン(v1)のデータがあれば自動移行
-      const oldRaw = localStorage.getItem("video_edit_projects_v1");
-      if(oldRaw){
-        const old = JSON.parse(oldRaw);
+      // v2(案件のみ)からの移行
+      const v2 = localStorage.getItem("video_edit_projects_v2");
+      if(v2){
+        projects = JSON.parse(v2);
+        workLogs = [];
+        saveData();
+        return;
+      }
+      // v1からの移行
+      const v1 = localStorage.getItem("video_edit_projects_v1");
+      if(v1){
+        const old = JSON.parse(v1);
         projects = old.map(p=>({
           ...p,
           firstDraft: p.firstDraft || "",
           deadline: p.deadline || "",
           delivered: p.status === "完了" ? (p.delivered || p.deadline || "") : (p.delivered || "")
         }));
+        workLogs = [];
         saveData();
-      }else{
-        projects = [];
+        return;
       }
+      projects = [];
+      workLogs = [];
     }catch(e){
       projects = [];
+      workLogs = [];
     }
   }
   function saveData(){
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({projects, workLogs}));
   }
 
   /* ---------- 手取り計算 ---------- */
@@ -778,6 +926,12 @@
     const parts = d.split('-');
     return parts.length===3 ? `${Number(parts[1])}/${Number(parts[2])}` : d;
   }
+  function fmtDateWithWeek(d){
+    if(!d) return "-";
+    const date = new Date(d);
+    const w = ['日','月','火','水','木','金','土'][date.getDay()];
+    return `${fmtDate(d)}(${w})`;
+  }
   function daysDiff(dateStr){
     const today = new Date();
     today.setHours(0,0,0,0);
@@ -790,6 +944,14 @@
       '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
     }[m]));
   }
+  function calcHours(start, end){
+    if(!start || !end) return 0;
+    const [sh,sm] = start.split(':').map(Number);
+    const [eh,em] = end.split(':').map(Number);
+    let mins = (eh*60+em) - (sh*60+sm);
+    if(mins < 0) mins += 24*60; // 日跨ぎ対応
+    return Math.round((mins/60)*100)/100;
+  }
 
   /* ---------- ページ切り替え ---------- */
   document.querySelectorAll('.nav-btn').forEach(btn=>{
@@ -800,14 +962,23 @@
       document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
       document.getElementById('page-' + currentPage).classList.add('active');
 
+      const headerIcon = document.getElementById('headerIcon');
+      const headerTitle = document.getElementById('headerTitle');
+      const sortBtn = document.getElementById('sortBtn');
+
       if(currentPage === 'projects'){
-        document.getElementById('headerIcon').textContent = '🎬';
-        document.getElementById('headerTitle').textContent = '案件管理';
-        document.getElementById('sortBtn').style.display = '';
+        headerIcon.textContent = '🎬';
+        headerTitle.textContent = '案件管理';
+        sortBtn.style.display = '';
+      }else if(currentPage === 'logs'){
+        headerIcon.textContent = '📝';
+        headerTitle.textContent = '日報';
+        sortBtn.style.display = 'none';
+        renderLogList();
       }else{
-        document.getElementById('headerIcon').textContent = '📊';
-        document.getElementById('headerTitle').textContent = '売上履歴';
-        document.getElementById('sortBtn').style.display = 'none';
+        headerIcon.textContent = '📊';
+        headerTitle.textContent = '売上履歴';
+        sortBtn.style.display = 'none';
         renderSalesPage();
       }
     });
@@ -831,13 +1002,8 @@
     });
   });
 
-  /* ---------- 統計カード(タップでフィルタ) ---------- */
-  document.getElementById('statInProgress').addEventListener('click', ()=>{
-    setFilterByStatGroup('progress');
-  });
-  document.getElementById('statDone').addEventListener('click', ()=>{
-    setFilterByStatGroup('done');
-  });
+  document.getElementById('statInProgress').addEventListener('click', ()=> setFilterByStatGroup('progress'));
+  document.getElementById('statDone').addEventListener('click', ()=> setFilterByStatGroup('done'));
   function setFilterByStatGroup(group){
     document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
     document.getElementById('statInProgress').classList.remove('active-filter');
@@ -853,7 +1019,7 @@
     renderProjectList();
   }
 
-  /* ---------- モーダル制御 ---------- */
+  /* ---------- 案件モーダル制御 ---------- */
   const modalOverlay = document.getElementById('modalOverlay');
   const modalTitle = document.getElementById('modalTitle');
   const form = document.getElementById('projectForm');
@@ -879,17 +1045,18 @@
     document.getElementById('f_status').value = p.status;
     modalOverlay.classList.add('active');
   }
-  function closeModal(){
-    modalOverlay.classList.remove('active');
-  }
+  function closeModal(){ modalOverlay.classList.remove('active'); }
 
-  document.getElementById('openAddBtn').addEventListener('click', openModalForAdd);
-  document.getElementById('cancelBtn').addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', (e)=>{
-    if(e.target === modalOverlay) closeModal();
+  document.getElementById('openAddBtn').addEventListener('click', ()=>{
+    if(currentPage === 'logs'){
+      openLogModalForAdd();
+    }else{
+      openModalForAdd();
+    }
   });
+  document.getElementById('cancelBtn').addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', (e)=>{ if(e.target === modalOverlay) closeModal(); });
 
-  // ステータスを完了に変更したら納品完了日に今日の日付を自動入力(空の場合のみ)
   document.getElementById('f_status').addEventListener('change', function(){
     const deliveredInput = document.getElementById('f_delivered');
     if(this.value === '完了' && !deliveredInput.value){
@@ -926,16 +1093,109 @@
     showToast("保存しました");
   });
 
-  /* ---------- 削除 ---------- */
   function deleteProject(id){
-    if(!confirm("この案件を削除しますか？")) return;
+    if(!confirm("この案件を削除しますか？関連する日報も削除されます。")) return;
     projects = projects.filter(p=>p.id !== id);
+    workLogs = workLogs.filter(l=>l.projectId !== id);
+    saveData();
+    renderAll();
+    showToast("削除しました");
+  }
+
+  /* ---------- 日報モーダル制御 ---------- */
+  const logModalOverlay = document.getElementById('logModalOverlay');
+  const logModalTitle = document.getElementById('logModalTitle');
+  const logForm = document.getElementById('logForm');
+
+  function fillProjectSelect(selectedId){
+    const sel = document.getElementById('l_projectId');
+    const available = projects.filter(p=> p.status !== '完了' || p.id === selectedId);
+    sel.innerHTML = available.map(p=> `<option value="${p.id}">${escapeHtml(p.name)}</option>`).join('');
+    if(available.length === 0){
+      sel.innerHTML = '<option value="">対象の案件がありません</option>';
+    }
+    if(selectedId) sel.value = selectedId;
+  }
+
+  function openLogModalForAdd(){
+    if(projects.filter(p=>p.status !== '完了').length === 0){
+      alert("日報を入力できる案件（完了以外）がありません。先に案件を登録してください。");
+      return;
+    }
+    logModalTitle.textContent = "日報を入力";
+    logForm.reset();
+    document.getElementById('logId').value = "";
+    fillProjectSelect();
+    const today = new Date();
+    const ymd = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
+    document.getElementById('l_date').value = ymd;
+    updateCalcHours();
+    logModalOverlay.classList.add('active');
+  }
+  function openLogModalForEdit(l){
+    logModalTitle.textContent = "日報を編集";
+    document.getElementById('logId').value = l.id;
+    fillProjectSelect(l.projectId);
+    document.getElementById('l_date').value = l.date;
+    document.getElementById('l_start').value = l.start;
+    document.getElementById('l_end').value = l.end;
+    document.getElementById('l_memo').value = l.memo || "";
+    updateCalcHours();
+    logModalOverlay.classList.add('active');
+  }
+  function closeLogModal(){ logModalOverlay.classList.remove('active'); }
+
+  document.getElementById('logCancelBtn').addEventListener('click', closeLogModal);
+  logModalOverlay.addEventListener('click', (e)=>{ if(e.target === logModalOverlay) closeLogModal(); });
+
+  function updateCalcHours(){
+    const start = document.getElementById('l_start').value;
+    const end = document.getElementById('l_end').value;
+    const h = calcHours(start, end);
+    document.getElementById('calcHoursBox').textContent = `かかった時間：${h.toFixed(1)}時間`;
+  }
+  document.getElementById('l_start').addEventListener('input', updateCalcHours);
+  document.getElementById('l_end').addEventListener('input', updateCalcHours);
+
+  logForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const id = document.getElementById('logId').value;
+    const projectId = document.getElementById('l_projectId').value;
+    const date = document.getElementById('l_date').value;
+    const start = document.getElementById('l_start').value;
+    const end = document.getElementById('l_end').value;
+    const memo = document.getElementById('l_memo').value.trim();
+    if(!projectId){ alert("案件を選択してください"); return; }
+    const hours = calcHours(start, end);
+    if(hours <= 0){ alert("終了時間は開始時間より後にしてください"); return; }
+
+    if(id){
+      const idx = workLogs.findIndex(l=>l.id === id);
+      if(idx > -1){
+        workLogs[idx] = {...workLogs[idx], projectId, date, start, end, hours, memo};
+      }
+    }else{
+      workLogs.push({id: uid(), projectId, date, start, end, hours, memo});
+    }
+    saveData();
+    renderAll();
+    closeLogModal();
+    showToast("日報を保存しました");
+  });
+
+  function deleteLog(id){
+    if(!confirm("この日報を削除しますか？")) return;
+    workLogs = workLogs.filter(l=>l.id !== id);
     saveData();
     renderAll();
     showToast("削除しました");
   }
 
   /* ---------- 案件カード生成(タップで開閉) ---------- */
+  function getProjectHours(projectId){
+    return workLogs.filter(l=>l.projectId===projectId).reduce((s,l)=> s + Number(l.hours||0), 0);
+  }
+
   function createCard(p){
     const div = document.createElement('div');
     div.className = 'card' + (openCardIds[p.id] ? ' open' : '');
@@ -943,9 +1203,10 @@
     const overdue = p.status !== '完了' && p.deadline && daysDiff(p.deadline) > 0;
     const dDiff = p.deadline ? daysDiff(p.deadline) : null;
     let deadlineLabel = p.deadline ? fmtDate(p.deadline) + ' 納期' : '納期未設定';
-    if(overdue){
-      deadlineLabel = `${dDiff}日超過`;
-    }
+    if(overdue) deadlineLabel = `${dDiff}日超過`;
+
+    const totalHours = getProjectHours(p.id);
+    const wage = totalHours > 0 ? Math.round(p.net / totalHours) : null;
 
     div.innerHTML = `
       <div class="card-main">
@@ -970,6 +1231,8 @@
           <div><div class="label">最終納期日</div><div class="v">${p.deadline ? fmtDate(p.deadline) : '-'}</div></div>
           <div><div class="label">納品完了日</div><div class="v">${p.delivered ? fmtDate(p.delivered) : '-'}</div></div>
           <div><div class="label">契約金額</div><div class="v">${yen(p.amount)}</div></div>
+          <div><div class="label">累計作業時間</div><div class="v">${totalHours > 0 ? totalHours.toFixed(1)+'時間' : '記録なし'}</div></div>
+          <div><div class="label">実質時給</div><div class="v wage">${wage !== null ? yen(wage)+'/h' : '-'}</div></div>
         </div>
         <div class="card-actions">
           <button class="edit-btn">✏️ 編集</button>
@@ -981,18 +1244,11 @@
       openCardIds[p.id] = !openCardIds[p.id];
       div.classList.toggle('open');
     });
-    div.querySelector('.edit-btn').addEventListener('click', (e)=>{
-      e.stopPropagation();
-      openModalForEdit(p);
-    });
-    div.querySelector('.del-btn').addEventListener('click', (e)=>{
-      e.stopPropagation();
-      deleteProject(p.id);
-    });
+    div.querySelector('.edit-btn').addEventListener('click', (e)=>{ e.stopPropagation(); openModalForEdit(p); });
+    div.querySelector('.del-btn').addEventListener('click', (e)=>{ e.stopPropagation(); deleteProject(p.id); });
     return div;
   }
 
-  /* ---------- 案件一覧描画 ---------- */
   function renderProjectList(){
     const container = document.getElementById('projectList');
     container.innerHTML = "";
@@ -1035,9 +1291,61 @@
     document.getElementById('statDoneVal').textContent = doneThisMonth.length + '件';
   }
 
+  /* ---------- 日報ページ描画 ---------- */
+  function renderLogList(){
+    const container = document.getElementById('logList');
+    container.innerHTML = "";
+
+    if(workLogs.length === 0){
+      container.innerHTML = '<div class="empty">まだ日報がありません。右下の＋から入力できます</div>';
+      return;
+    }
+
+    const groups = {};
+    workLogs.forEach(l=>{
+      if(!groups[l.date]) groups[l.date] = [];
+      groups[l.date].push(l);
+    });
+    const dateKeys = Object.keys(groups).sort().reverse();
+    const projMap = {};
+    projects.forEach(p=> projMap[p.id] = p);
+
+    dateKeys.forEach(date=>{
+      const list = groups[date].sort((a,b)=> a.start.localeCompare(b.start));
+      const dayTotal = list.reduce((s,l)=> s + Number(l.hours||0), 0);
+
+      const group = document.createElement('div');
+      group.className = 'log-date-group';
+      group.innerHTML = `<div class="log-date-head">${fmtDateWithWeek(date)} <span class="lh-total">合計 ${dayTotal.toFixed(1)}時間</span></div>`;
+
+      list.forEach(l=>{
+        const p = projMap[l.projectId];
+        const card = document.createElement('div');
+        card.className = 'log-card';
+        card.innerHTML = `
+          <div class="log-top">
+            <div>
+              <div class="log-project">${p ? escapeHtml(p.name) : '(削除された案件)'}</div>
+              <div class="log-time">${l.start} 〜 ${l.end}</div>
+            </div>
+            <span class="log-hours">${Number(l.hours).toFixed(1)}h</span>
+          </div>
+          ${l.memo ? `<div class="log-memo">${escapeHtml(l.memo)}</div>` : ''}
+          <div class="log-actions">
+            <button class="edit-btn">✏️ 編集</button>
+            <button class="del-btn">🗑️ 削除</button>
+          </div>
+        `;
+        card.querySelector('.edit-btn').addEventListener('click', ()=> openLogModalForEdit(l));
+        card.querySelector('.del-btn').addEventListener('click', ()=> deleteLog(l.id));
+        group.appendChild(card);
+      });
+      container.appendChild(group);
+    });
+  }
+
   /* ---------- 売上履歴ページ ---------- */
   function getSalesData(){
-    // 売上集計対象：ステータス「完了」かつ「納品完了日」が入力されている案件のみ
     return projects.filter(p=> p.status === '完了' && p.delivered);
   }
 
@@ -1045,16 +1353,14 @@
     const salesData = getSalesData();
     const years = [...new Set(salesData.map(p=>p.delivered.slice(0,4)))].sort().reverse();
 
-    // 全期間累計
     const allTimeTotal = salesData.reduce((s,p)=> s + Number(p.amount||0), 0);
     document.getElementById('allTimeSub').textContent = `${salesData.length}件の案件`;
     document.getElementById('allTimeValue').textContent = yen(allTimeTotal);
-    
+
     const yearTabsEl = document.getElementById('yearTabs');
     yearTabsEl.innerHTML = "";
 
     if(years.length === 0){
-      yearTabsEl.innerHTML = '';
       document.getElementById('yearTotalLabel').textContent = '合計売上';
       document.getElementById('yearTotalSub').textContent = '0件の案件';
       document.getElementById('yearTotalValue').textContent = '¥0';
@@ -1070,10 +1376,7 @@
       const btn = document.createElement('button');
       btn.className = 'year-tab' + (y === currentYear ? ' active' : '');
       btn.textContent = y + '年';
-      btn.addEventListener('click', ()=>{
-        currentYear = y;
-        renderSalesPage();
-      });
+      btn.addEventListener('click', ()=>{ currentYear = y; renderSalesPage(); });
       yearTabsEl.appendChild(btn);
     });
 
@@ -1083,7 +1386,6 @@
     document.getElementById('yearTotalSub').textContent = `${yearList.length}件の案件`;
     document.getElementById('yearTotalValue').textContent = yen(yearTotal);
 
-    // 月別グループ化
     const groups = {};
     yearList.forEach(p=>{
       const ym = p.delivered.slice(0,7);
@@ -1113,7 +1415,7 @@
         </div>
         <div class="month-body">
           <div class="month-row" style="border-top:none;padding-top:0;">
-            <div class="mr-name" style="color:var(--sub);font-weight:700;">手取り合計</div>
+            <div class="mr-name" style="color:var(--sub);font-weight:600;">手取り合計</div>
             <div class="mr-amount" style="color:var(--accent);">${yen(netTotal)}</div>
           </div>
           ${list.map(p=>`
@@ -1142,14 +1444,13 @@
   function renderAll(){
     renderStats();
     renderProjectList();
-    if(currentPage === 'sales'){
-      renderSalesPage();
-    }
+    if(currentPage === 'logs') renderLogList();
+    if(currentPage === 'sales') renderSalesPage();
   }
 
   /* ---------- バックアップ／復元 ---------- */
   document.getElementById('backupBtn').addEventListener('click', async ()=>{
-    const text = JSON.stringify(projects);
+    const text = JSON.stringify({projects, workLogs});
     try{
       await navigator.clipboard.writeText(text);
       showToast("クリップボードにコピーしました");
@@ -1161,15 +1462,23 @@
 
   document.getElementById('restoreBtn').addEventListener('click', ()=>{
     const text = document.getElementById('restoreText').value.trim();
-    if(!text){
-      showToast("データを貼り付けてください");
-      return;
-    }
+    if(!text){ showToast("データを貼り付けてください"); return; }
     try{
       const data = JSON.parse(text);
-      if(!Array.isArray(data)) throw new Error("形式が不正です");
+      let newProjects, newLogs;
+      if(Array.isArray(data)){
+        // 旧形式(案件配列のみ)
+        newProjects = data;
+        newLogs = [];
+      }else if(data && Array.isArray(data.projects)){
+        newProjects = data.projects;
+        newLogs = Array.isArray(data.workLogs) ? data.workLogs : [];
+      }else{
+        throw new Error("形式が不正です");
+      }
       if(!confirm("現在のデータに上書きして復元します。よろしいですか？")) return;
-      projects = data;
+      projects = newProjects;
+      workLogs = newLogs;
       saveData();
       renderAll();
       document.getElementById('restoreText').value = "";
